@@ -1,18 +1,13 @@
 import React from "react";
-import '../styles/main.css';
+import Left_Pannel_Homepage from "../components/left_panel_homepage";
+import Right_Pannel_Homepage from "../components/right_panel_homepage";
+
 
 const Homepage = () => {
     return (
         <div className="container">
-            <div className="ring_container">
-                <img className="ring" src="..\public\ring.svg"></img>
-                <div className="text_container">
-                    <h2>Title</h2>
-                    <p>Hello This is me</p>
-                </div>
-            </div>
-            <img className="for" src="..\public\For.svg"></img>
-            <img className="bak" src="..\public\Bak.svg" width={800}></img>
+            <Left_Pannel_Homepage />
+            <Right_Pannel_Homepage />
         </div>
     );
 };

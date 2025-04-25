@@ -1,0 +1,39 @@
+@import '../variables/variables.scss';
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+    background-image: url('../../../public/For.svg');
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px;
+}
+
+.about-card {
+    background: $medium_dark;
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: all 0.3s;
+    border: 1px solid $lighter_dark;
+    grid-column: span 2;
+
+    &:hover {
+        transform: translateY(-5px);
+        background: $lighter_dark;
+        border-color: $secondary;
+    }
+}
+
+.about-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: $secondary;
+}
+
+.about-stack {
+    width: 100%;
+    height: fit-content;
+}

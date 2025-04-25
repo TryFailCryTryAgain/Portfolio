@@ -1,58 +1,456 @@
+/* ==========================================================================
+   SCSS Reset
+   ========================================================================== */
+/**
+ * A modern reset that preserves useful defaults rather than the "unstyling everything" approach.
+ * Based on ideas from: Andy Bell's Modern CSS Reset, Normalize.css, and others.
+ */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+body,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+figure,
+hr,
+fieldset, legend {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* Remove default button styles */
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Remove default table spacing */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Reset form elements */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default focus styles for mouse users */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+body {
+  background-color: #1A1B25;
+  color: #F8F7FF;
+  overflow-x: hidden;
+}
+
 .container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  min-height: 100vh;
   position: relative;
-  height: 800px;
-  width: 800px;
-  overflow: hidden;
 }
-.container .for {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  height: calc(100% + 100px);
-  width: calc(100% + 100px);
+
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .left-panel {
+    padding: 2rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
 }
-.container .ring_container {
-  position: absolute;
-  top: 175px;
-  left: 20px;
-  z-index: 2;
-  background-color: rgba(36, 36, 36, 0.8);
-  height: 150px;
-  width: 400px;
-  display: flex;
-  align-items: center;
-  border-radius: 12px;
-  padding: 0 20px;
+@media (max-width: 768px) {
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .intro {
+    max-width: 100%;
+  }
 }
-.container .text_container {
+.left-panel {
+  background: linear-gradient(135deg, #FF00E6, #00CCFF);
+  padding: 3rem;
   display: flex;
   flex-direction: column;
-  margin-left: 200px; /* Positive margin instead of negative */
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
-.container .text_container h2, .container .text_container p {
-  margin: 0;
-  color: white;
+.left-panel .hero {
+  margin-top: auto;
+  margin-bottom: auto;
 }
-.container .text_container h2 {
+.left-panel .hero .tagline {
   font-size: 1.2rem;
+  color: #00CCFF;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.left-panel .hero h1 {
+  font-size: 4rem;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  background: linear-gradient(to right, #F8F7FF, #00CCFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.left-panel .hero .intro {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  max-width: 80%;
+}
+.left-panel .hero .cta-buttons {
+  display: flex;
+  gap: 1rem;
+}
+.left-panel .hero .btn {
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
   font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: none;
 }
-.container .text_container p {
-  font-size: 0.9rem;
-  opacity: 0.8;
+.left-panel .hero .work-btn-primary {
+  background-color: #FF00E6 !important;
+  color: #F8F7FF !important;
 }
-.container .ring {
-  width: 300px; /* Kept original size */
-  height: auto;
-  margin-left: -50px;
-  margin-right: -250px; /* Pulls text closer to ring */
+.left-panel .hero .work-btn-primary:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 10px 20px rgba(255, 0, 230, 0.3) !important;
 }
-.container .bak {
+.left-panel .hero .contact-btn-secondary {
+  background-color: transparent !important;
+  color: #F8F7FF !important;
+  border: 2px solid #F8F7FF !important;
+}
+.left-panel .hero .contact-btn-secondary:hover {
+  background-color: #F8F7FF !important;
+  color: #1A1B25 !important;
+}
+.left-panel .floating-shapes {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+.left-panel .shape {
+  position: absolute;
+  opacity: 0.2;
+  border-radius: 50%;
+}
+.left-panel .shape-1 {
+  width: 300px;
+  height: 300px;
+  background: #FF6B6B;
+  top: -100px;
+  right: -100px;
+  filter: blur(60px);
+}
+.left-panel .shape-2 {
+  width: 200px;
+  height: 200px;
+  background: #CC00FF;
+  bottom: -50px;
+  left: -50px;
+  filter: blur(40px);
+}
+@media (max-width: 1024px) {
+  .left-panel {
+    padding: 2rem;
+  }
+  .left-panel .hero-content h1 {
+    font-size: 2.5rem;
+  }
+}
+
+.right-panel {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+.right-panel .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+.right-panel .nav-links {
+  display: flex;
+  gap: 2rem;
+}
+.right-panel .nav-links a {
+  color: #F8F7FF;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+.right-panel .nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #CC00FF;
+  transition: width 0.3s;
+}
+.right-panel .nav-links a:hover::after {
+  width: 100%;
+}
+.right-panel .tech-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+  padding: 20px;
+}
+.right-panel .tech-card {
+  background: #262730;
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: all 0.3s;
+  border: 1px solid #31323B;
+}
+.right-panel .tech-card:hover {
+  transform: translateY(-5px);
+  background: #31323B;
+  border-color: #00CCFF;
+}
+.right-panel .tech-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #00CCFF;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+  background-image: url("../../../public/For.svg");
+  background-size: 200%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px;
+}
+
+.about-card {
+  background: #262730;
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: all 0.3s;
+  border: 1px solid #31323B;
+  grid-column: span 2;
+}
+.about-card:hover {
+  transform: translateY(-5px);
+  background: #31323B;
+  border-color: #00CCFF;
+}
+
+.about-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #00CCFF;
+}
+
+.about-stack {
+  width: 100%;
+  height: fit-content;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact-info {
+  text-align: center;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+.contact-info h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to right, #F8F7FF, #00CCFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-details {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #F8F7FF;
+}
+.contact-item i {
+  color: #00CCFF;
+}
+
+.contact-form {
+  width: 100%;
+  background: #1A1B25;
+  border-radius: 15px;
+  padding: 2.5rem;
+  border: 1px solid #31323B;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background: #262730;
+  border: 1px solid #31323B;
+  border-radius: 8px;
+  color: var(--light);
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(110, 68, 255, 0.2);
+}
+
+textarea.form-control {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact-form-btn {
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: none;
+}
+
+.contact-form-btn-primary {
+  background-color: var(--accent);
+  color: var(--dark);
+}
+
+.contact-form-btn-primary:hover {
+  background-color: #31323B;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 204, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 1.5rem;
+  }
+  .contact-details {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
 }/*# sourceMappingURL=main.css.map */

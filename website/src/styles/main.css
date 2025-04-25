@@ -202,6 +202,7 @@ body {
   background-color: transparent !important;
   color: #F8F7FF !important;
   border: 2px solid #F8F7FF !important;
+  text-decoration: none;
 }
 .left-panel .hero .contact-btn-secondary:hover {
   background-color: #F8F7FF !important;
@@ -241,8 +242,49 @@ body {
   .left-panel {
     padding: 2rem;
   }
-  .left-panel .hero-content h1 {
-    font-size: 2.5rem;
+  .left-panel .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  .left-panel .hero .intro {
+    max-width: 90%;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+  }
+  .left-panel .shape-1 {
+    width: 200px;
+    height: 200px;
+    filter: blur(40px);
+  }
+}
+@media (max-width: 768px) {
+  .left-panel {
+    padding: 1.5rem;
+  }
+  .left-panel .hero .tagline {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+  .left-panel .hero h1 {
+    font-size: 2.25rem;
+    margin-bottom: 1.25rem;
+  }
+  .left-panel .hero .intro {
+    font-size: 1rem;
+    margin-bottom: 1.75rem;
+  }
+  .left-panel .hero .cta-buttons {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .left-panel .hero .btn {
+    padding: 0.75rem 1.5rem;
+    text-align: center;
+  }
+  .left-panel .shape-2 {
+    width: 150px;
+    height: 150px;
+    filter: blur(30px);
   }
 }
 
@@ -303,6 +345,101 @@ body {
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #00CCFF;
+}
+@media (max-width: 1200px) {
+  .right-panel {
+    padding: 2.5rem;
+  }
+  .right-panel .header {
+    margin-bottom: 3rem;
+  }
+  .right-panel .nav-links {
+    gap: 1.5rem;
+  }
+  .right-panel .tech-grid {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 992px) {
+  .right-panel {
+    padding: 2rem;
+  }
+  .right-panel .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    padding: 0 15px;
+    margin: 2rem auto 0;
+    max-width: 90%;
+  }
+  .right-panel .tech-card {
+    padding: 1.25rem;
+  }
+}
+@media (max-width: 768px) {
+  .right-panel {
+    padding: 1.75rem;
+  }
+  .right-panel .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .right-panel .nav-links {
+    gap: 1.25rem;
+    flex-wrap: wrap;
+  }
+  .right-panel .tech-grid {
+    margin: 2rem auto 0;
+    gap: 1rem;
+    padding: 0 15px;
+    max-width: 95%;
+  }
+  .right-panel .tech-icon {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+}
+@media (max-width: 576px) {
+  .right-panel {
+    padding: 1.5rem;
+  }
+  .right-panel .header {
+    margin-bottom: 2rem;
+  }
+  .right-panel .nav-links {
+    gap: 1rem;
+  }
+  .right-panel .tech-grid {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+    max-width: 100%;
+    margin: 1.5rem auto 0;
+  }
+  .right-panel .tech-card {
+    padding: 1.25rem;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
+  }
+  .right-panel .tech-icon {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 400px) {
+  .right-panel {
+    padding: 1.25rem;
+  }
+  .right-panel .nav-links {
+    gap: 0.75rem;
+  }
+  .right-panel .tech-grid {
+    padding: 0 8px;
+  }
+  .right-panel .tech-card {
+    padding: 1rem;
+    max-width: 100%;
+  }
 }
 
 .about-grid {
@@ -408,14 +545,14 @@ body {
   background: #262730;
   border: 1px solid #31323B;
   border-radius: 8px;
-  color: var(--light);
+  color: #F8F7FF;
   font-size: 1rem;
   transition: all 0.3s;
 }
 
 .form-control:focus {
   outline: none;
-  border-color: var(--secondary);
+  border-color: #00CCFF;
   box-shadow: 0 0 0 3px rgba(110, 68, 255, 0.2);
 }
 
@@ -434,23 +571,51 @@ textarea.form-control {
 }
 
 .contact-form-btn-primary {
-  background-color: var(--accent);
-  color: var(--dark);
+  background-color: #00CCFF;
+  color: #F8F7FF;
+  border: 1px solid #31323B;
 }
 
 .contact-form-btn-primary:hover {
-  background-color: #31323B;
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 204, 255, 0.3);
+  border: 1px solid #31323B;
 }
 
 @media (max-width: 768px) {
-  .contact-form {
-    padding: 1.5rem;
+  .contact-container {
+    padding: 0 1rem;
+  }
+  .contact-info {
+    margin-bottom: 2rem;
+  }
+  .contact-info h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
   }
   .contact-details {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+  }
+  .contact-form {
+    padding: 1.5rem;
+    border-radius: 10px;
+  }
+  .form-group {
+    margin-bottom: 1.25rem;
+  }
+  .form-control {
+    padding: 0.7rem 1rem;
+    font-size: 0.95rem;
+  }
+  textarea.form-control {
+    min-height: 120px;
+  }
+  .contact-form-btn {
+    padding: 0.75rem 1.5rem;
+    width: 100%;
   }
 }/*# sourceMappingURL=main.css.map */

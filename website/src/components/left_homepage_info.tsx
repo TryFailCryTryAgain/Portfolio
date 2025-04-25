@@ -13,7 +13,7 @@ const Left_Homepage_Info = () => {
             </p>
             <div className="cta-buttons">
                 <button className="btn work-btn-primary">View My Work</button> {/* Add Link function */}
-                <button className="btn contact-btn-secondary">Contact Me</button> {/* Add Link function */}
+                <Link className="btn contact-btn-secondary" to="/contact">Contact Me</Link>
             </div>
         </div>
     );

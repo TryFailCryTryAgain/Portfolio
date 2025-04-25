@@ -4,22 +4,19 @@ import emailjs from "emailjs-com";
 const Contact_Form = () => {
     const form = useRef<HTMLFormElement>(null);
 
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const userId = import.meta.env.VITE_EMAILJS_USER_ID;
+
     const sendEmail = (e: React.FormEvent) => {
         e.preventDefault();
 
         if (form.current) {
-            {/* Update the keys and add them to the .env file thru dotenv */}
-            {/*
-                'YOUR_SERVICE_ID', 
-                'YOUR_TEMPLATE_ID', 
-                form.current, 
-                'YOUR_USER_ID'
-             */}
             emailjs.sendForm(
-                'service_zcp3lro',
-                'template_rkuds7o', 
-                form.current, 
-                'PVbKHmDgq6WpPC8bJ'
+                serviceId,
+                templateId,
+                form.current,
+                userId
             )
             .then((result) => {
                 console.log(result.text);

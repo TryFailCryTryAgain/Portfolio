@@ -8,8 +8,15 @@ const Contact_Form = () => {
         e.preventDefault();
 
         if (form.current) {
+            {/* Update the keys and add them to the .env file thru dotenv */}
+            {/*
+                'YOUR_SERVICE_ID', 
+                'YOUR_TEMPLATE_ID', 
+                form.current, 
+                'YOUR_USER_ID'
+             */}
             emailjs.sendForm(
-                'service_zcp3lro', 
+                'service_zcp3lro',
                 'template_rkuds7o', 
                 form.current, 
                 'PVbKHmDgq6WpPC8bJ'

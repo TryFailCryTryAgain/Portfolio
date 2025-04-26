@@ -12,7 +12,7 @@ const Left_Homepage_Info = () => {
                 I bridge the gap between beautiful interfaces and robust systems.
             </p>
             <div className="cta-buttons">
-                <button className="btn work-btn-primary">View My Work</button> {/* Add Link function */}
+                <Link className="btn work-btn-primary" to="/work">View My Work</Link>
                 <Link className="btn contact-btn-secondary" to="/contact">Contact Me</Link>
             </div>
         </div>

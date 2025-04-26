@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import About_me from "./about_me";
-import Header from "./common/header";
+import About_me from "../about_me";
+import Header from "../common/header";
 
 const Right_Pannel_Homepage = () => {
     return (

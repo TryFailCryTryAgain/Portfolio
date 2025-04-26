@@ -16,6 +16,16 @@
         display: flex;
         gap: 2rem;
 
+        .change_lang {
+            font-weight: 300;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .change_lang:hover {
+            color: $secondary;
+        }
+
         a {
             color: $light;
             text-decoration: none;

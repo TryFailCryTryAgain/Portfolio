@@ -193,6 +193,7 @@ body {
 .left-panel .hero .work-btn-primary {
   background-color: #FF00E6 !important;
   color: #F8F7FF !important;
+  text-decoration: none !important;
 }
 .left-panel .hero .work-btn-primary:hover {
   transform: translateY(-3px) !important;
@@ -302,6 +303,14 @@ body {
 .right-panel .nav-links {
   display: flex;
   gap: 2rem;
+}
+.right-panel .nav-links .change_lang {
+  font-weight: 300;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.right-panel .nav-links .change_lang:hover {
+  color: #00CCFF;
 }
 .right-panel .nav-links a {
   color: #F8F7FF;
@@ -618,4 +627,153 @@ textarea.form-control {
     padding: 0.75rem 1.5rem;
     width: 100%;
   }
+}
+.showcase-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.showcase-container .work-filter-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+.showcase-container .work-filter-controls .filter-btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  background: transparent;
+  border: 1px solid #00CCFF;
+  color: #00CCFF;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.showcase-container .work-filter-controls .filter-btn.active, .showcase-container .work-filter-controls .filter-btn:hover {
+  background: #00CCFF;
+  color: #1A1B25;
+}
+.showcase-container .showcase-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+.showcase-container .showcase-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to right, #F8F7FF, #00CCFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.showcase-container .project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+.showcase-container .project-grid .project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border-color: #00CCFF;
+}
+.showcase-container .project-grid .project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+.showcase-container .project-grid .project-card .project-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+.showcase-container .project-grid .project-card .project-details {
+  padding: 1.5rem;
+}
+.showcase-container .project-grid .project-card .project-details .project-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #F8F7FF;
+}
+.showcase-container .project-grid .project-card .project-details .project-description {
+  color: #00CCFF;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.showcase-container .project-grid .project-card .project-details .project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.showcase-container .project-grid .project-card .project-details .project-tags .tag {
+  background: rgba(110, 68, 255, 0.2);
+  color: #F8F7FF;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+.showcase-container .project-grid .project-card .project-links {
+  display: flex;
+  gap: 1rem;
+}
+.showcase-container .project-grid .project-card .project-links .project-link:hover {
+  color: #CC00FF;
+}
+.showcase-container .project-grid .project-card .project-links .project-link {
+  color: #F8F7FF;
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: color 0.3s;
+}
+.showcase-container .project-grid .project-card .project-links .project-link i {
+  color: #CC00FF;
+}
+
+@media (min-width: 1200px) {
+  .workpage_container {
+    margin-bottom: 300px;
+  }
+}
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .testing-grounds {
+  height: 200px;
+  width: 400px;
+  border-radius: 5px;
+  background-color: #31323B;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+}
+.wrapper .testing-grounds .test-translation {
+  background-color: #CC00FF;
+  padding: 12px 24px;
+  border-radius: 12px;
+}
+.wrapper .testing-grounds .output {
+  background-color: #FF00E6;
+  padding: 12px 24px;
+  border-radius: 12px;
+}
+.wrapper .testing-grounds .test-btn {
+  background-color: #00CCFF;
+  padding: 12px 24px;
+  border-radius: 12px;
+  color: #F8F7FF;
 }/*# sourceMappingURL=main.css.map */

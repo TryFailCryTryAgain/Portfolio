@@ -11,7 +11,7 @@ const Left_ContactPage_Info = () => {
             I'd love to hear from you. Fill out the form or use my contact details.
             </p>
             <div className="cta-buttons">
-                <button className="btn work-btn-primary">View My Work</button> {/* Add Link function */}
+                <Link className="btn work-btn-primary" to="/work">View My Work</Link>
                 <Link className="btn contact-btn-secondary" to="/">Back Home</Link>
             </div>
         </div>

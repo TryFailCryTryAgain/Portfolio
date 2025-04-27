@@ -1,7 +1,9 @@
 import React from "react";
-
+import { useTranslation } from "react-i18next";
 
 const about_me = () => {
+    const { t } = useTranslation();
+
     return (
         <>
             <div className="about-stack">
@@ -11,7 +13,7 @@ const about_me = () => {
                         <div className="about-icon">
                             <i className="fa-solid fa-user"></i>
                         </div>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consectetur obcaecati, excepturi soluta neque id commodi veniam eaque placeat quasi aliquid quae magnam necessitatibus quas numquam similique saepe earum officia.
+                        {t('about_me_text')}
                     </div>
                 </div>
                 <br/>

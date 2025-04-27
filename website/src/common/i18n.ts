@@ -1,5 +1,6 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import about_me from '../components/about_me';
 
 i18n
   .use(initReactI18next)
@@ -18,7 +19,8 @@ i18n
             home: "Home",
             work: "Work",
             about: "About Me",
-            contact: "Contact"
+            contact: "Contact",
+            about_me_text: "This is a short text about me..."
         }
       },
       se: {
@@ -28,7 +30,8 @@ i18n
             home: "Hem",
             work: "Projekt",
             about: "Om Mig",
-            contact: "Kontakt"
+            contact: "Kontakt",
+            about_me_text: "Det här är en kort text om mig..."
 
         }
       }

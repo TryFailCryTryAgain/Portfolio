@@ -7,13 +7,15 @@ const about_me = () => {
     return (
         <>
             <div className="about-stack">
-                <h3>About Me</h3>
+                <h3>{t('about')}</h3>
                 <div className="about-grid">
                     <div className="about-card">
                         <div className="about-icon">
                             <i className="fa-solid fa-user"></i>
                         </div>
-                        {t('about_me_text')}
+                        <span className="about-text">{t('about_me_text')}</span>
+                        <span className="about-text">{t('about_me_text2')}</span> 
+                        <span className="about-text">{t('about_me_text3')}</span>                       
                     </div>
                 </div>
                 <br/>

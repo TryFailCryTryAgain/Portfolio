@@ -476,6 +476,10 @@ body {
   background: #31323B;
   border-color: #00CCFF;
 }
+.about-card .about-text {
+  display: block;
+  margin-bottom: 20px;
+}
 
 .about-icon {
   font-size: 2rem;
@@ -488,6 +492,22 @@ body {
   height: fit-content;
 }
 
+@media (max-width: 992px) {
+  .about-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-grid .about-card {
+    grid-column: span 1;
+  }
+}
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .about-grid .about-card {
+    grid-column: span 1;
+  }
+}
 .contact-container {
   display: flex;
   flex-direction: column;
@@ -743,37 +763,4 @@ textarea.form-control {
   .workpage_container {
     margin-bottom: 300px;
   }
-}
-.wrapper {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.wrapper .testing-grounds {
-  height: 200px;
-  width: 400px;
-  border-radius: 5px;
-  background-color: #31323B;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 100px;
-}
-.wrapper .testing-grounds .test-translation {
-  background-color: #CC00FF;
-  padding: 12px 24px;
-  border-radius: 12px;
-}
-.wrapper .testing-grounds .output {
-  background-color: #FF00E6;
-  padding: 12px 24px;
-  border-radius: 12px;
-}
-.wrapper .testing-grounds .test-btn {
-  background-color: #00CCFF;
-  padding: 12px 24px;
-  border-radius: 12px;
-  color: #F8F7FF;
 }/*# sourceMappingURL=main.css.map */

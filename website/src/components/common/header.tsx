@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
@@ -32,7 +32,7 @@ const Header = () => {
                 <span className="change_lang" onClick={changeLanguage}>{languages[currentLangIndex].name}</span> {/* implement i18next functionallity*/}
                 <Link to="/">{t('home')}</Link>
                 <Link to="/work">{t('work')}</Link>
-                <a href="/test">{t('about')}</a> {/* Might add another About me page*/}
+                {/* Might add another About me page*/}
                 <Link to="/contact">{t('contact')}</Link>
             </nav>
         </header>

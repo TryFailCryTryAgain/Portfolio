@@ -1,7 +1,10 @@
 import React, { useRef } from "react";
 import emailjs from "emailjs-com";
+import { useTranslation } from "react-i18next";
 
 const Contact_Form = () => {
+    const { t } = useTranslation();
+
     const form = useRef<HTMLFormElement>(null);
 
     const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
@@ -32,7 +35,7 @@ const Contact_Form = () => {
     return (
         <div className="contact-container">
             <div className="contact-info">
-                <h2>Contact Information</h2>
+                <h2>{t('contact_title')}</h2>
                 <div className="contact-details">
                     <div className="contact-item">
                         <i className="fas fa-envelope"></i>
@@ -51,7 +54,7 @@ const Contact_Form = () => {
             
             <form ref={form} onSubmit={sendEmail} className="contact-form">
                 <div className="form-group">
-                    <label htmlFor="name">Your Name</label>
+                    <label htmlFor="name">{t('form_name')}</label>
                     <input 
                         type="text" 
                         id="name" 
@@ -62,7 +65,7 @@ const Contact_Form = () => {
                 </div>
                 
                 <div className="form-group">
-                    <label htmlFor="email">Email Address</label>
+                    <label htmlFor="email">{t('form_email')}</label>
                     <input 
                         type="email" 
                         id="email" 
@@ -73,7 +76,7 @@ const Contact_Form = () => {
                 </div>
                 
                 <div className="form-group">
-                    <label htmlFor="subject">Subject</label>
+                    <label htmlFor="subject">{t('form_subject')}</label>
                     <input 
                         type="text" 
                         id="subject" 
@@ -84,7 +87,7 @@ const Contact_Form = () => {
                 </div>
                 
                 <div className="form-group">
-                    <label htmlFor="message">Your Message</label>
+                    <label htmlFor="message">{t('form_message')}</label>
                     <textarea 
                         id="message" 
                         name="message" 
@@ -94,7 +97,7 @@ const Contact_Form = () => {
                 </div>
                 
                 <button type="submit" className="contact-form-btn contact-form-btn-primary">
-                    Send Message
+                    {t('form_send_message')}
                 </button>
             </form>
         </div>

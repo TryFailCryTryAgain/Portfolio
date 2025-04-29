@@ -2,8 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import About_me from "../about_me";
 import Header from "../common/header";
+import { useTranslation } from "react-i18next";
 
 const Right_Pannel_Homepage = () => {
+    const { t } = useTranslation();
+
     return (
         <div className="right-panel">
 
@@ -11,7 +14,7 @@ const Right_Pannel_Homepage = () => {
             <About_me />
             
             <div className="tech-stack">
-                <h3>My Tech Arsenal</h3>
+                <h3>{t('tech')}</h3>
                 <div className="tech-grid">
                     <div className="tech-card">
                         <div className="tech-icon">

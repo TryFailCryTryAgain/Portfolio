@@ -31,7 +31,7 @@ i18n
             contactpage_info: "Have a project in mind or want to discuss potential opportunities? I'd love to hear from you. Fill out the form or use my contact details.",
             contact_title: "Contact Information",
             form_name: "Your Name",
-            form_email: "Email Adress",
+            form_email: "Email Address",
             form_subject: "Subject",
             form_message: "Your Message",
             form_send_message: "Send Message",

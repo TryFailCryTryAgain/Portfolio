@@ -30,7 +30,7 @@ const Right_Pannel_Workpage = () => {
                         <div className="project-details">
                             <h3 className="project-title">Chatroom Platform</h3>
                             <p className="project-description">
-                                A simplistic communication platform that supports direct and group discords between the users.
+                                A simplistic communication platform that supports direct and group messages between the users.
                             </p>
                             <p className="project-description">
                                 This project has been built thru my origanisation Static Lain which I am a co-founder of.

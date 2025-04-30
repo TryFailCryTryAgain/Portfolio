@@ -456,7 +456,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-top: 3rem;
-  background-image: url("./For.svg");
+  background-image: url("../../public/For.svg");
   background-size: 200%;
   background-repeat: no-repeat;
   background-position: center;

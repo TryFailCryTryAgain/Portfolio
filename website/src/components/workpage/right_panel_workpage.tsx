@@ -1,5 +1,3 @@
-import React from "react";
-import { Link } from "react-router-dom";
 import Header from "../common/header";
 import { useTranslation } from "react-i18next";
 

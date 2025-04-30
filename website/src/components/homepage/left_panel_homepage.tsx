@@ -1,5 +1,3 @@
-import React from "react";
-import { Link } from "react-router-dom";
 import Left_Homepage_Info from "./left_homepage_info";
 
 const Left_Pannel_Homepage = () => {

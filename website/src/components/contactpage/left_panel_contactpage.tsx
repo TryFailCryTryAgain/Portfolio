@@ -1,5 +1,3 @@
-import React from "react";
-import { Link } from "react-router-dom";
 import Left_ContactPage_Info from "./left_contactpage_info";
 
 const Left_Pannel_Contactpage = () => {

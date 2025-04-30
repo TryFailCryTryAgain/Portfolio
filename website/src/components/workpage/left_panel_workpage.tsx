@@ -1,4 +1,3 @@
-import React from "react";
 import Left_Workpage_Info from "./left_workpage_info";
 
 const Left_Pannel_Workpage = () => {

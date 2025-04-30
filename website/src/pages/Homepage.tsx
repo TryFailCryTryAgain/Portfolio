@@ -1,4 +1,3 @@
-import React from "react";
 import Left_Pannel_Homepage from "../components/homepage/left_panel_homepage";
 import Right_Pannel_Homepage from "../components/homepage/right_panel_homepage";
 

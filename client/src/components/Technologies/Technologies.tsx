@@ -1,4 +1,9 @@
 import style from './Technologies.module.css';
+import astro from '../../assets/tabler_brand-astro.png';
+import vite from '../../assets/tabler_brand-vite.png';
+import vercel from '../../assets/tabler_brand-vercel.png';
+import typescript from '../../assets/tabler_brand-typescript.png';
+import netlify from '../../assets/Netlify.png';
 
 function Technologies() {
     return (
@@ -40,20 +45,29 @@ function Technologies() {
                     JavaScript
                 </div>
                 <div className={style.tech}>
-                    <i className="fab"></i>
+                    <img src={typescript} alt="typescript logo" />
                     Typescript
                 </div>
                 <div className={style.tech}>
-                    <i className="fab"></i>
+                    <img src={vercel} alt="vercel Logo" />
                     Vercel
                 </div>
                 <div className={style.tech}>
-                    <i className="fabs"></i>
+                    <img src={netlify} alt="netlify Logo" />
                     Netlify
                 </div>
                 <div className={style.tech}>
                     <i className="fab fa-node-js"></i>
                     Nodejs
+                </div>
+                <div className={style.tech}>
+                    <i className="fab"></i>
+                    <img src={astro} alt="Astrojs Logo" />
+                    Astrojs
+                </div>
+                <div className={style.tech}>
+                    <img src={vite} alt="vite logo" />
+                    Vite
                 </div>
             </div>
 

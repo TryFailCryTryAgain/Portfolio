@@ -111,13 +111,25 @@
 
 .tech {
     font-size: 14px;
-    padding: 1px;
+    padding: 4px;
     border: 1px solid;
     border-radius: 4px;
     border-color: var(--accent);
     color: var(--accent);
+
+    transition: color, background-color .3s ease;
 }
 
+.tech:hover {
+    color: var(--text);
+    background-color: var(--accent);
+}
+
+img {
+    height: 16px;
+    width: 16px;
+    object-fit: contain;
+}
 
 .muted {
     color: var(--text-muted);

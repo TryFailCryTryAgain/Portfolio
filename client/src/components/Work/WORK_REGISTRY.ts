@@ -1,0 +1,15 @@
+import Margret from "./margret/Margret";
+import Phillip from "./phillip/Philip";
+import Steve from "./Steve/Steve";
+
+
+export interface WorkDefinition {
+    title: string;
+    component: React.ComponentType;
+}
+
+export const WORK_REGISTRY: Record<string, WorkDefinition> = {
+    steve: { title: 'Steve', component: Steve},
+    philip: { title: 'Philip', component: Phillip},
+    margret: { title: 'Margret', component: Margret}
+};

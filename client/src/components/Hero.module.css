@@ -1,0 +1,25 @@
+
+.hero {
+    text-align: left;
+    line-height: 1.35;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--bg-300);
+}
+
+.title {
+    font-size: var(--header);
+    font-weight: 600;
+    font-family: var(--mono);
+}
+
+.subtitle {
+    font-size: var(--header);
+    font-weight: 600;
+    font-family: var(--mono);   
+    color: var(--accent);
+}
+
+.about {
+    color: var(--text-muted);
+
+}

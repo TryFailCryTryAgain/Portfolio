@@ -11,11 +11,11 @@ export interface LinkCells {
 }
 
 export const CELL_REGISTRY: Record<string, LinkCells> = {
-    steve: { 
-        hyperlink: "work/steve", 
+    os: { 
+        hyperlink: "work/OperativeSystem", 
         picture: hero, 
-        title: "Steve",
-        desc: "Steve",
+        title: "Operative System Simulator",
+        desc: "This is a simulated operative system made within React. Includes taskbar, a virtual filesystem and functional apps",
         techs: ["TypeScript", "React"],
     },
     philip: { 

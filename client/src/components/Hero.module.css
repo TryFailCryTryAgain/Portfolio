@@ -23,3 +23,14 @@
     color: var(--text-muted);
 
 }
+
+.anchor {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--text-muted);
+    border: 1px solid var(--bg-200);
+    width: fit-content;
+    padding: 2px 4px;
+}

@@ -13,6 +13,12 @@ function Hero() {
                 <p className={style.about}>
                     Newly graduated fullstack developer...
                 </p>
+
+
+                <a className={style.anchor}>
+                    <i className='fab fa-github'></i>
+                    Github link
+                </a>
             </section>
 
             

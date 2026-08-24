@@ -19,7 +19,7 @@
     .grid_layout {
         grid-template-columns: repeat(1, 1fr);
     }
-    
+
 }
 
 .cell {
@@ -108,5 +108,6 @@
 
 .muted {
     color: var(--text-muted);
+    font-size: 16px;
 }
 

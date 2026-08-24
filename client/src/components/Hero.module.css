@@ -9,7 +9,8 @@
 .title {
     font-size: var(--header);
     font-weight: 600;
-    font-family: var(--mono);
+    font-family: var(--heading);
+    line-height: 1;
 }
 
 .subtitle {
@@ -17,11 +18,23 @@
     font-weight: 600;
     font-family: var(--mono);   
     color: var(--accent);
+    line-height: 1;
+    padding-bottom: 10px;
 }
 
 .about {
     color: var(--text-muted);
+}
 
+.location {
+    color: var(--text-muted);
+}
+
+.anchor_wrapper {
+    display: flex;
+    padding: 10px 0;
+    gap: 5px;
+    flex-wrap: wrap;
 }
 
 .anchor {
@@ -30,7 +43,19 @@
     align-items: center;
     gap: 4px;
     color: var(--text-muted);
-    border: 1px solid var(--bg-200);
+    border: 1px solid var(--bg-300);
+    border-radius: 7px;
     width: fit-content;
     padding: 2px 4px;
+    
+    cursor: pointer;
+    text-decoration: none;
+
+    transition: color .2s ease, border-color .2s ease;
+
+}
+
+.anchor:hover {
+    color: var(--accent2);
+    border-color: var(--accent2);
 }

@@ -5,6 +5,9 @@ import { CELL_REGISTRY } from './LinkCells';
 function WorkGridLayout() {
     return (
         <>
+
+            <p className={style.title}>Projects</p>
+
             <section className={style.grid_layout}>
             
                 {Object.entries(CELL_REGISTRY).map(([key, cell]) => (
@@ -22,7 +25,7 @@ function WorkGridLayout() {
                         }}
                     >
                         <div>
-                            <div>{cell.title}</div>
+                            <div className={style.cell_title}>{cell.title}</div>
                             <div className={style.muted}>{cell.desc}</div>
                         </div>
                         

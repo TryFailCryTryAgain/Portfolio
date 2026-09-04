@@ -1,6 +1,5 @@
-import Margret from "./margret/Margret";
-import Phillip from "./phillip/Philip";
 import OS from "./OS/OS";
+import Paper from "./Paper/Paper";
 
 export interface WorkDefinition {
     title: string;
@@ -9,6 +8,5 @@ export interface WorkDefinition {
 
 export const WORK_REGISTRY: Record<string, WorkDefinition> = {
     OperativeSystem: { title: 'OperativeSystem', component: OS},
-    philip: { title: 'Philip', component: Phillip},
-    margret: { title: 'Margret', component: Margret}
+    Paper: { title: 'DataCollection Paper', component: Paper}
 };

@@ -11,6 +11,8 @@ function Technologies() {
 
             <p className={style.title}>Technologies</p>
 
+            <br />
+
             <div className={style.tech_wrapper}>
                 <div className={style.tech}>
                     <i className="fab fa-react"></i>

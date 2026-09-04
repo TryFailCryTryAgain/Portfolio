@@ -114,21 +114,18 @@
     padding: 4px;
     border: 1px solid;
     border-radius: 4px;
-    border-color: var(--accent);
-    color: var(--accent);
+    border-color: var(--text);
+    color: var(--text);
 
     transition: color, background-color .3s ease;
+
+
 }
 
 .tech:hover {
     color: var(--text);
     background-color: var(--accent);
-}
-
-img {
-    height: 16px;
-    width: 16px;
-    object-fit: contain;
+    border-color: var(--accent);
 }
 
 .muted {

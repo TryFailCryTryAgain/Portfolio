@@ -1,6 +1,6 @@
 import hero from '../assets/hero.png';
-import img2 from '../assets/react.svg';
-import img3 from '../assets/vite.svg';
+// import img2 from '../assets/react.svg';
+// import img3 from '../assets/vite.svg';
 
 export interface LinkCells {
     hyperlink: string;

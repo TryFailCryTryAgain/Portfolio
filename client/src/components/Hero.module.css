@@ -13,6 +13,12 @@
     line-height: 1;
 }
 
+@media (max-width: 748px) {
+    .title {
+        margin-bottom: 10px;
+    }
+}
+
 .subtitle {
     font-size: var(--header);
     font-weight: 600;
@@ -27,6 +33,11 @@
 }
 
 .location {
+    color: var(--accent2);
+}
+
+.work_location::before {
+    content: '|';
     color: var(--text-muted);
 }
 
@@ -42,7 +53,7 @@
     display: flex;
     align-items: center;
     gap: 4px;
-    color: var(--text-muted);
+    color: var(--text);
     border: 1px solid var(--bg-300);
     border-radius: 7px;
     width: fit-content;

@@ -18,7 +18,7 @@ function Ed_Intership() {
                         <div className={style.row_title_wrapper}>
                             <div className={style.row_title}>
                                 <span className={style[row.tag]}>{row.tag}</span>
-                                {row.title}
+                                <span>{row.title}</span>
                             </div>
                             <div className={style.year}>
                                 {row.year}

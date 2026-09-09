@@ -27,7 +27,7 @@ export const Commands: Commands[] = [
         description: "Print the contents of a file"
     },
     {
-        command: "echo <text> < <file>",
+        command: "echo <text> > <file>",
         description: "Write text to a file or directly output it into the terminal"
     },
     {

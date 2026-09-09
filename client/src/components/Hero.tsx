@@ -9,7 +9,7 @@ function Hero() {
                 <p className={style.title}>David Segerbo</p>
                 <p className={style.subtitle}>Fullstack Engineer</p>
 
-                <p className={style.location}>Uppsala, Sweden <span>| Open to remote, hybrid & onsite</span></p>
+                <p className={style.location}>Uppsala, Sweden <span className={style.work_location}> Open to remote, hybrid & onsite</span></p>
                 <br />
                 {/* Fill in with good about me text */}
                 <p className={style.about}>
@@ -38,7 +38,7 @@ function Hero() {
 
                     <a href="" className={style.anchor}>
                         <i className='fas fa-phone'></i>
-                        +46 727 03 2004
+                        +46 727032004
                     </a>
                 </div>
             </section>

@@ -4,7 +4,6 @@
     font-weight: 600;
     font-family: var(--heading);
 
-    padding-left: 20px;
     padding-bottom: 10px;
 }
 
@@ -23,6 +22,7 @@
 
     position: relative;
     max-height: fit-content;
+    max-width: fit-content;
 }
 
 
@@ -48,6 +48,7 @@
 
     position: relative;
     max-height: fit-content;
+    max-width: fit-content;
 }
 
 .Education::before {
@@ -92,4 +93,19 @@
 .year {
     color: var(--text-muted);
     font-size: 16px;
+}
+
+
+@media (max-width: 748px) {
+    
+    .row_title_wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .row_title {
+        display: flex;
+        flex-direction: column;
+    }
+    
 }

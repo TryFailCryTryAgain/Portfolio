@@ -14,6 +14,14 @@
     margin-bottom: 4px;
 }
 
+@media (max-width: 748px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}
+
 .back_button {
     display: inline-flex;
     align-items: center;
@@ -21,6 +29,7 @@
 
     width: 36px;
     height: 36px;
+    flex-shrink: 0;
 
     color: var(--text);
     text-decoration: none;
@@ -112,11 +121,17 @@
 
 /* ---- Stats table ---- */
 
-.stats_table {
+.stats_table_wrapper {
     width: 100%;
     max-width: 60ch;
-    border-collapse: collapse;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     margin-top: 8px;
+}
+
+.stats_table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
 .stats_table th,
@@ -159,12 +174,12 @@
     display: flex;
     align-items: center;
     gap: 4px;
-    color: var(--text-muted);
+    color: var(--text);
     border: 1px solid var(--bg-300);
     border-radius: 7px;
     width: fit-content;
     padding: 2px 4px;
-    
+
     cursor: pointer;
     text-decoration: none;
 
@@ -175,4 +190,108 @@
 .anchor:hover {
     color: var(--accent2);
     border-color: var(--accent2);
+}
+
+/* =========================================================
+   Mobile
+========================================================= */
+
+@media (max-width: 600px) {
+    .Thesis {
+        gap: 8px;
+        padding-bottom: 40px;
+    }
+
+    .title {
+        font-size: clamp(1.15rem, 5.5vw, var(--header));
+        line-height: 1.3;
+        word-break: break-word;
+    }
+
+    .meta {
+        font-size: 0.8em;
+    }
+
+    .description {
+        max-width: 100%;
+        font-size: 0.95em;
+    }
+
+    .section_heading {
+        margin-top: 22px;
+        padding-bottom: 6px;
+    }
+
+    .feature_list,
+    .decisions_list,
+    .tech_list,
+    .next_steps_list {
+        max-width: 100%;
+        padding-left: 18px;
+        gap: 6px;
+        font-size: 0.95em;
+    }
+
+    .stats_table_wrapper {
+        max-width: 100%;
+    }
+
+    .anchor {
+        font-size: 13px;
+    }
+}
+
+/* Below this width, the stats table stops scrolling and reflows into
+   labeled cards. Requires each <td> to carry a data-label attribute
+   matching its column header, e.g. <td data-label="Metric">. */
+@media (max-width: 480px) {
+    .stats_table_wrapper {
+        overflow-x: visible;
+    }
+
+    .stats_table thead {
+        display: none;
+    }
+
+    .stats_table,
+    .stats_table tbody,
+    .stats_table tr,
+    .stats_table td {
+        display: block;
+        width: 100%;
+    }
+
+    .stats_table tr {
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+
+    .stats_table tr:nth-child(even) td {
+        background-color: transparent;
+    }
+
+    .stats_table td {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        border: none;
+        border-bottom: 1px solid var(--border);
+        padding: 10px 12px;
+        text-align: left;
+    }
+
+    .stats_table td:last-child {
+        border-bottom: none;
+        white-space: normal;
+    }
+
+    .stats_table td::before {
+        content: attr(data-label);
+        font-family: var(--heading);
+        color: var(--text-muted);
+        font-size: 0.85em;
+    }
 }

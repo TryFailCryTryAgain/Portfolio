@@ -23,6 +23,13 @@ export const CELL_REGISTRY: Record<string, LinkCells> = {
         title: 'Data collection as a basis for decision-making',
         desc: 'A paper researching how data collection can be used for a decision-making regarding the development of a website. It touches on active / passive data collection. Qualitative / Quantitaive collection. The legal scope that a collection needs to abide by as well as a stick stample and End-To-End tests for a self-developed analytics program. ',
         techs: ["Thesis"],
+    },
+    contact: {
+        hyperlink: 'work/ContactCenter',
+        picture: hero,
+        title: 'Mini Contact Center',
+        desc: 'A mini contact center where multiple users share one chatroom',
+        techs: ["Vue", "TypeScript", "Docker", "Express"]
     }
 }
 

@@ -41,6 +41,13 @@ function Hero() {
                         +46 727032004
                     </a>
                 </div>
+
+                <div className={style.warning}>
+                    <span className={style.warning_icon}>
+                        &#x26A0; 
+                    </span>
+                    Calling from outside Sweden? Please email or send me a message thru LinkedIn first
+                </div>
             </section>
 
             

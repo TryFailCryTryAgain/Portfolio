@@ -1,11 +1,39 @@
 import style from './Education_Intership.module.css';
 import { EDUCATION_WORK_REGISTRY } from './Ed_Work_REGISTRY';
+import { CURRENT_OCCUPATION_REGISTRY } from './CurrentOccupation';
 
 function Ed_Intership() {
 
 
     return (
         <>
+
+            <div className={style.title}>Current Occupation</div>
+
+            <div className={style.ed_wrapper}>
+                {Object.entries(CURRENT_OCCUPATION_REGISTRY).map(([key, row]) => (
+                    <div
+                        key={key}
+                        className={style.row}
+                    >
+                        <div className={style.row_title_wrapper}>
+                            <div className={style.row_title}>
+                                <span className={style[row.tag]}>{row.tag}</span>
+                                <span>{row.title}</span>
+                            </div>
+                            <div className={style.year}>
+                                {row.year}
+                            </div>
+                        </div>
+                        <div className={style.subtitle}>{row.place}</div>
+                        <div className={style.desc}>{row.desc}</div>
+
+                    </div>
+                ))}
+            </div>
+
+            <br />
+
 
             <div className={style.title}>Earlier work & Education</div>
 

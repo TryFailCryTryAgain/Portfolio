@@ -70,3 +70,20 @@
     color: var(--accent2);
     border-color: var(--accent2);
 }
+
+.warning {
+    display: flex;
+    gap: 5px;
+    text-underline-position: above;
+    background-color: hsl(from var(--accent2) h s l / .075);
+    padding: 4px 8px;
+    width: fit-content;
+    border-radius: 14px;
+    border: 1px solid var(--accent2);
+    color: var(--text);
+    font-size: 16px;
+}
+
+.warning_icon {
+    color: var(--accent2);
+}
